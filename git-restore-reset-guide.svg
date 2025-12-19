@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 800" width="900" height="800">
   <rect width="900" height="800" fill="#1a1a2e"/>
 
-  <text x="450" y="45" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="bold" fill="#ffffff">Git Restore &amp; Reset Guide</text>
+  <text x="450" y="45" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="bold" fill="#ffffff">Git Restore and Reset Guide</text>
 
   <rect x="50" y="80" width="200" height="110" rx="15" fill="#667eea"/>
   <text x="150" y="115" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#ffffff">Working Directory</text>
@@ -22,67 +22,83 @@
   <circle cx="60" cy="265" r="20" fill="#e74c3c"/>
   <text x="60" y="272" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff">1</text>
   <text x="95" y="255" font-family="monospace" font-size="15" font-weight="bold" fill="#e74c3c">git restore [파일명]</text>
-  <text x="95" y="280" font-family="sans-serif" font-size="13" fill="#cccccc">작업 디렉토리의 변경사항을 되돌립니다 (마지막 커밋 또는 스테이징 상태로)</text>
-  <line x1="620" y1="265" x2="500" y2="265" stroke="#e74c3c" stroke-width="3" stroke-dasharray="8,4"/>
-  <polygon points="500,265 515,258 515,272" fill="#e74c3c"/>
-  <rect x="640" y="248" width="120" height="35" rx="5" fill="#e74c3c" fill-opacity="0.3"/>
-  <text x="700" y="270" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#e74c3c">Staging에서 복원</text>
+  <text x="95" y="280" font-family="sans-serif" font-size="13" fill="#cccccc">작업 디렉토리의 변경사항을 되돌립니다 (스테이징 또는 HEAD 상태로)</text>
+  <rect x="580" y="248" width="280" height="35" rx="5" fill="#2d2d44" stroke="#e74c3c" stroke-width="1"/>
+  <rect x="590" y="255" width="70" height="22" rx="3" fill="#e84393"/>
+  <text x="625" y="270" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">Staging</text>
+  <line x1="665" y1="266" x2="720" y2="266" stroke="#e74c3c" stroke-width="3"/>
+  <polygon points="720,266 708,260 708,272" fill="#e74c3c"/>
+  <rect x="725" y="255" width="70" height="22" rx="3" fill="#667eea"/>
+  <text x="760" y="270" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">Working</text>
+  <text x="800" y="290" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#e74c3c">변경 취소</text>
 
   <rect x="30" y="330" width="840" height="90" rx="10" fill="#2d2d44" stroke="#3498db" stroke-width="2"/>
   <circle cx="60" cy="375" r="20" fill="#3498db"/>
   <text x="60" y="382" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff">2</text>
   <text x="95" y="365" font-family="monospace" font-size="15" font-weight="bold" fill="#3498db">git restore --staged [파일명]</text>
   <text x="95" y="390" font-family="sans-serif" font-size="13" fill="#cccccc">스테이징 영역에서 파일을 제거합니다 (git add 취소)</text>
-  <line x1="780" y1="375" x2="560" y2="375" stroke="#3498db" stroke-width="3" stroke-dasharray="8,4"/>
-  <polygon points="560,375 575,368 575,382" fill="#3498db"/>
-  <rect x="640" y="358" width="120" height="35" rx="5" fill="#3498db" fill-opacity="0.3"/>
-  <text x="700" y="380" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#3498db">Unstage 처리</text>
+  <rect x="580" y="358" width="280" height="35" rx="5" fill="#2d2d44" stroke="#3498db" stroke-width="1"/>
+  <rect x="590" y="365" width="70" height="22" rx="3" fill="#00b894"/>
+  <text x="625" y="380" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">Repo</text>
+  <line x1="665" y1="376" x2="720" y2="376" stroke="#3498db" stroke-width="3"/>
+  <polygon points="720,376 708,370 708,382" fill="#3498db"/>
+  <rect x="725" y="365" width="70" height="22" rx="3" fill="#e84393"/>
+  <text x="760" y="380" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">Staging</text>
+  <text x="800" y="400" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#3498db">Unstage</text>
 
   <rect x="30" y="440" width="840" height="90" rx="10" fill="#2d2d44" stroke="#27ae60" stroke-width="2"/>
   <circle cx="60" cy="485" r="20" fill="#27ae60"/>
   <text x="60" y="492" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff">3</text>
   <text x="95" y="475" font-family="monospace" font-size="15" font-weight="bold" fill="#27ae60">git reset HEAD^</text>
-  <text x="95" y="500" font-family="sans-serif" font-size="13" fill="#cccccc">최신 커밋을 취소합니다. 변경사항은 작업 디렉토리에 유지됨 (--mixed 기본값)</text>
-  <line x1="780" y1="485" x2="320" y2="485" stroke="#27ae60" stroke-width="3" stroke-dasharray="8,4"/>
-  <polygon points="320,485 335,478 335,492" fill="#27ae60"/>
-  <rect x="550" y="468" width="150" height="35" rx="5" fill="#27ae60" fill-opacity="0.2"/>
-  <text x="625" y="490" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#27ae60">HEAD^ = 직전 커밋</text>
+  <text x="95" y="500" font-family="sans-serif" font-size="13" fill="#cccccc">최신 커밋을 취소합니다. 변경사항은 작업 디렉토리에 유지됨 (--mixed)</text>
+  <rect x="580" y="458" width="280" height="35" rx="5" fill="#2d2d44" stroke="#27ae60" stroke-width="1"/>
+  <rect x="590" y="465" width="70" height="22" rx="3" fill="#00b894"/>
+  <text x="625" y="480" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">Repo</text>
+  <line x1="665" y1="476" x2="720" y2="476" stroke="#27ae60" stroke-width="3"/>
+  <polygon points="720,476 708,470 708,482" fill="#27ae60"/>
+  <rect x="725" y="465" width="70" height="22" rx="3" fill="#667eea"/>
+  <text x="760" y="480" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">Working</text>
+  <text x="800" y="500" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#27ae60">HEAD^ = 직전</text>
 
   <rect x="30" y="550" width="840" height="100" rx="10" fill="#2d2d44" stroke="#e67e22" stroke-width="2"/>
   <circle cx="60" cy="600" r="20" fill="#e67e22"/>
   <text x="60" y="607" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff">4</text>
   <text x="95" y="580" font-family="monospace" font-size="15" font-weight="bold" fill="#e67e22">git reset [커밋해시]</text>
-  <text x="95" y="605" font-family="sans-serif" font-size="13" fill="#cccccc">특정 커밋으로 되돌립니다. 해당 커밋 이후의 변경사항은 작업 디렉토리에 유지</text>
-  <circle cx="550" cy="625" r="14" fill="#555555" stroke="#e67e22" stroke-width="2"/>
-  <text x="550" y="630" text-anchor="middle" font-family="monospace" font-size="8" fill="#ffffff">abc1</text>
-  <line x1="566" y1="625" x2="594" y2="625" stroke="#666666" stroke-width="2"/>
-  <circle cx="610" cy="625" r="14" fill="#555555" stroke="#e67e22" stroke-width="2"/>
-  <text x="610" y="630" text-anchor="middle" font-family="monospace" font-size="8" fill="#ffffff">def2</text>
-  <line x1="626" y1="625" x2="654" y2="625" stroke="#666666" stroke-width="2"/>
-  <circle cx="670" cy="625" r="14" fill="#e67e22" stroke="#e67e22" stroke-width="2"/>
-  <text x="670" y="630" text-anchor="middle" font-family="monospace" font-size="8" fill="#ffffff">ghi3</text>
-  <text x="670" y="650" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#e67e22">여기로!</text>
-  <line x1="686" y1="625" x2="714" y2="625" stroke="#666666" stroke-width="2" stroke-dasharray="4,2"/>
-  <circle cx="730" cy="625" r="14" fill="#333333" stroke="#666666" stroke-width="2" stroke-dasharray="3,2"/>
-  <text x="730" y="630" text-anchor="middle" font-family="monospace" font-size="8" fill="#888888">jkl4</text>
+  <text x="95" y="605" font-family="sans-serif" font-size="13" fill="#cccccc">특정 커밋으로 되돌립니다. 이후 변경사항은 작업 디렉토리에 유지</text>
+  <circle cx="550" cy="630" r="12" fill="#555555" stroke="#e67e22" stroke-width="2"/>
+  <text x="550" y="634" text-anchor="middle" font-family="monospace" font-size="7" fill="#ffffff">abc1</text>
+  <line x1="564" y1="630" x2="586" y2="630" stroke="#666666" stroke-width="2"/>
+  <circle cx="600" cy="630" r="12" fill="#555555" stroke="#e67e22" stroke-width="2"/>
+  <text x="600" y="634" text-anchor="middle" font-family="monospace" font-size="7" fill="#ffffff">def2</text>
+  <line x1="614" y1="630" x2="636" y2="630" stroke="#666666" stroke-width="2"/>
+  <circle cx="650" cy="630" r="12" fill="#e67e22" stroke="#e67e22" stroke-width="2"/>
+  <text x="650" y="634" text-anchor="middle" font-family="monospace" font-size="7" fill="#ffffff">ghi3</text>
+  <text x="650" y="620" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#e67e22">HERE</text>
+  <line x1="664" y1="630" x2="686" y2="630" stroke="#666666" stroke-width="2" stroke-dasharray="4,2"/>
+  <circle cx="700" cy="630" r="12" fill="#333333" stroke="#666666" stroke-width="2" stroke-dasharray="3,2"/>
+  <text x="700" y="634" text-anchor="middle" font-family="monospace" font-size="7" fill="#888888">jkl4</text>
+  <line x1="714" y1="630" x2="736" y2="630" stroke="#666666" stroke-width="2" stroke-dasharray="4,2"/>
+  <circle cx="750" cy="630" r="12" fill="#333333" stroke="#666666" stroke-width="2" stroke-dasharray="3,2"/>
+  <text x="750" y="634" text-anchor="middle" font-family="monospace" font-size="7" fill="#888888">mno5</text>
+  <text x="725" y="620" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#888888">삭제됨</text>
 
   <rect x="30" y="670" width="840" height="110" rx="10" fill="#2d2d44" stroke="#9b59b6" stroke-width="2"/>
   <circle cx="60" cy="725" r="20" fill="#9b59b6"/>
   <text x="60" y="732" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff">5</text>
   <text x="95" y="700" font-family="monospace" font-size="15" font-weight="bold" fill="#9b59b6">git revert [커밋해시]</text>
   <text x="95" y="725" font-family="sans-serif" font-size="13" fill="#cccccc">특정 커밋의 변경사항을 취소하는 새로운 커밋을 생성합니다</text>
-  <text x="95" y="750" font-family="sans-serif" font-size="10" fill="#9b59b6">* reset과 달리 히스토리가 보존되어 안전합니다 (협업 시 권장)</text>
-  <circle cx="550" cy="730" r="14" fill="#555555" stroke="#9b59b6" stroke-width="2"/>
-  <text x="550" y="735" text-anchor="middle" font-family="monospace" font-size="8" fill="#ffffff">A</text>
-  <line x1="566" y1="730" x2="594" y2="730" stroke="#666666" stroke-width="2"/>
-  <circle cx="610" cy="730" r="14" fill="#c0392b" stroke="#9b59b6" stroke-width="2"/>
-  <text x="610" y="735" text-anchor="middle" font-family="monospace" font-size="8" fill="#ffffff">B</text>
-  <text x="610" y="755" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#c0392b">취소대상</text>
-  <line x1="626" y1="730" x2="654" y2="730" stroke="#666666" stroke-width="2"/>
-  <circle cx="670" cy="730" r="14" fill="#555555" stroke="#9b59b6" stroke-width="2"/>
-  <text x="670" y="735" text-anchor="middle" font-family="monospace" font-size="8" fill="#ffffff">C</text>
-  <line x1="686" y1="730" x2="714" y2="730" stroke="#666666" stroke-width="2"/>
-  <circle cx="730" cy="730" r="14" fill="#27ae60" stroke="#9b59b6" stroke-width="3"/>
-  <text x="730" y="735" text-anchor="middle" font-family="monospace" font-size="8" fill="#ffffff">B'</text>
-  <text x="730" y="755" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#27ae60">새 커밋!</text>
+  <text x="95" y="750" font-family="sans-serif" font-size="10" fill="#9b59b6">* reset과 달리 히스토리가 보존됨 (협업 시 권장)</text>
+  <circle cx="550" cy="730" r="12" fill="#555555" stroke="#9b59b6" stroke-width="2"/>
+  <text x="550" y="734" text-anchor="middle" font-family="monospace" font-size="7" fill="#ffffff">A</text>
+  <line x1="564" y1="730" x2="586" y2="730" stroke="#666666" stroke-width="2"/>
+  <circle cx="600" cy="730" r="12" fill="#c0392b" stroke="#9b59b6" stroke-width="2"/>
+  <text x="600" y="734" text-anchor="middle" font-family="monospace" font-size="7" fill="#ffffff">B</text>
+  <text x="600" y="755" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#c0392b">취소대상</text>
+  <line x1="614" y1="730" x2="636" y2="730" stroke="#666666" stroke-width="2"/>
+  <circle cx="650" cy="730" r="12" fill="#555555" stroke="#9b59b6" stroke-width="2"/>
+  <text x="650" y="734" text-anchor="middle" font-family="monospace" font-size="7" fill="#ffffff">C</text>
+  <line x1="664" y1="730" x2="686" y2="730" stroke="#666666" stroke-width="2"/>
+  <circle cx="700" cy="730" r="12" fill="#27ae60" stroke="#9b59b6" stroke-width="3"/>
+  <text x="700" y="734" text-anchor="middle" font-family="monospace" font-size="7" fill="#ffffff">B'</text>
+  <text x="700" y="755" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#27ae60">NEW!</text>
 </svg>
